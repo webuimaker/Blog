@@ -2,7 +2,7 @@
 name: "Blog"
 description: "Basic Blog Strucre for Paxcel Technologies"
 author: "vivek kumar"
-email: vivek.kumar@paxcel.net
+email: webuimaker@gmail.com
 url: ""
 github : username
 twitter : username
@@ -21,7 +21,7 @@ navigation:
  - title: Contact
    url: /contact.html
    
-disqus: jekyllblogsite
+###disqus: jekyllblogsite
 
 gems:
    - jekyll-paginate
