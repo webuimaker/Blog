@@ -1,0 +1,68 @@
+---
+layout: default
+title: Home
+sitemap:
+priority: 1.0
+---
+
+{% for post in paginator.posts limit:2 %}
+<div class="unit whole single-post-excerpt">
+	<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+	<div class="meta-info">
+		<span class="meta"><time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time></span>
+		{% if post.tags and post.tags.size > 0 %}
+			<div class="tags">
+				Tagged:
+				{% for tag in post.tags %}
+				<span><i class="fa fa-tag"></i>{{ tag }}</span>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+	<p class="description">{{ post.excerpt | strip_html}}</p>
+</div>
+{% endfor %}
+<div class="unit whole paginator">
+	{% if paginator.total_pages > 1 %}
+  <ul class="pagination">
+     {% if paginator.previous_page %}
+         <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+     {% else %}
+         <li class="disabled"><a>&laquo;</a></li>
+     {% endif %}
+
+     {% for page in (1..paginator.total_pages) %}
+
+     {% if page == paginator.page %}
+         <li class="active"><a>{{ page | pnumber }}</a></li>
+     {% elsif page == 1 %}
+         <li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page | pnumber }}</a></li>
+     {% else %}
+         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page | pnumber }}</a></li>
+     {% endif %}
+
+     {% endfor %}
+
+     {% if paginator.next_page %}
+         <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+     {% else %}
+         <li class="disabled"><a>&raquo;</a></li>
+     {% endif %}
+  </ul>
+{% endif %}
+</div>
+
+
+
+
+<!--<form action="//formspree.io/vivek.kumar@paxcel.net"
+      method="POST">
+     <input type="text" name="_subject" value="New submission!" />
+     
+    <input type="text" >
+    
+    
+  
+    <input type="submit" value="Send">
+    <input type="hidden" name="_next" value="http://127.0.0.1:4000/" />
+</form> -->

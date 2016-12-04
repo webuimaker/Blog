@@ -1,0 +1,74 @@
+---
+---
+@import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+a:focus{outline:none;}
+h1,h2,h3,h4,h5,h6{}
+h1{font-size:30px}
+h2{font-size:25px}
+h3{font-size:20px}
+h4{font-size:18px}
+
+.item {
+	background: #333;
+	text-align: center;
+	height: 400px !important;
+}
+.carousel {
+	margin-top: 20px;
+}
+.share-page {
+	text-align: center;
+	padding: 8px 15px;
+	border-radius: 5px;
+ a {
+ font-weight: 700;
+ color: #fff;
+ margin-left: 10px;
+ &:hover {
+ border-bottom: 1px dashed #fff;
+}
+}
+}
+footer {
+	padding: 10px 0px;
+	color: #fff;
+	display: block;
+	margin-top: 15px
+}
+/*//////////////////////////////////////////////
+			Header Style
+////////////////////////////////////////////// */
+
+.navbar{border-radius:0px;}
+
+.meta-info {
+	color:#8F8F8F;
+	margin-bottom:10px;
+	font-size:12px;
+	.meta{
+		display:inline-block; 
+		margin-right:10px;
+		
+		time{
+			i{margin-right:5px;}
+		}
+	}
+	.tags{
+		display:inline-block;
+		i{margin-right:5px;}
+	}
+}
+
+.tag-list{margin-right:3px;}
+.panel-heading h4{margin:0px;}
+.cat-list{
+	padding:0px 4px;
+	li{list-style:none}
+} 
+
+.navbar-brand {
+	font-family:"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+	color:#e5493a !important;
+	font-size:22px;
+}

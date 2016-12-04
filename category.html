@@ -1,0 +1,23 @@
+---
+layout: default
+title: Category
+---
+<h3>{{page.title}}</h3>
+<ul class="cat-list">
+{% for category in site.tags %}
+  <li><h3><a name="{{ category | first }}" id="{{ category | first }}">{{ category | first }}</a></h3>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+      {% if post.url %}
+        <li>
+        	<h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>        
+       		<!--<span class="meta"><time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time></span>-->
+        </li>
+      {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>

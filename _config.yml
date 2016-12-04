@@ -1,0 +1,30 @@
+### GENERAL SETTINGS ###
+name: "Blog"
+description: "Basic Blog Strucre for Paxcel Technologies"
+author: "vivek kumar"
+email: vivek.kumar@paxcel.net
+url: ""
+github : username
+twitter : username
+baseurl: /Blog
+
+paginate: 5
+
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About Us
+   url: /about.html
+ - title: Category
+   url: /category.html
+ - title: Contact
+   url: /contact.html
+   
+disqus: jekyllblogsite
+
+gems:
+   - jekyll-paginate
+
+### pagination
+paginate: 4
