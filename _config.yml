@@ -6,7 +6,7 @@ email: webuimaker@gmail.com
 url: ""
 github : username
 twitter : username
-baseurl: /Blog
+#baseurl: /Blog
 navigation:
  - title: Home
    url: /index.html
